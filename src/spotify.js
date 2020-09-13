@@ -12,6 +12,8 @@ const redirectUri = "http://localhost:3000/";
 
 const clientId = "ea1673f7df8a41f0aad584b33a93357a";
 
+//scopes will be listed in the middle of the page thanks to the spotify api
+
 const scopes = [
     "user-read-currently-playing",
     "user-read-recently-played",
@@ -19,6 +21,26 @@ const scopes = [
     "user-top-read",
     "user-modify-playback-state",
 ];
+
+export const getTokenFromUrl = () => {
+    return window.location.hash
+    .substring(1)
+    .split('&')
+    .reduce((initial, item) => {
+
+        //#accesstoken=mysupersecretkey&name=etc
+
+        //split it at the = sign
+
+        var parts = item.split('=');
+
+        initial[parts[0]] = decodeURIComponent(parts[1]);
+
+        return initial;
+
+        //parts[0] is the accesstoken
+    }, {});
+}
 
 //crazy url
 
