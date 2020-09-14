@@ -11,8 +11,6 @@ const spotify = new SpotifyWebApi();
 function App() {
   const [token, setToken] = useState(null);
 
-  const [{}, dispatch] = useDataLayerValue();
-
   //useEffect hooks again
   //run code based on a given condition
   useEffect(() => {
