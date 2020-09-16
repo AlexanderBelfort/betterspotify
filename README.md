@@ -66,3 +66,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+For now, it's more of a play with the Spotify API. We use it for authentication and to later play with the songs that are currently playing, the songs that have been recently played, a user's top list and etc..
+
+![spotify1](https://i.imgur.com/iMqsALm.png)
